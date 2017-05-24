@@ -1,0 +1,8 @@
+{
+  "name": "training-createjs",
+  "dependencies": {},
+  "globalDependencies": {
+    "createjs": "registry:dt/createjs#0.0.0+20160510010627",
+    "createjs-lib": "registry:dt/createjs-lib#0.0.0+20160510002910"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "training-createjs",
+  "version": "1.0.0",
+  "description": "training for createjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogurasousui/training-createjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogurasousui/training-createjs/issues"
+  },
+  "homepage": "https://github.com/ogurasousui/training-createjs#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.3",
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "exports-loader": "^0.6.4",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-webpack": "^1.5.0",
+    "imports-loader": "^0.7.1",
+    "path": "^0.12.7",
+    "typescript": "^2.3.3",
+    "typings": "^2.1.1",
+    "webpack": "^2.6.0"
+  }
+}

@@ -1,0 +1,34 @@
+# Windows
+desktop.ini
+Thumbs.db
+*.bak
+*.BACKUP/
+
+# Mac
+.DS_Store
+.Trashes
+*.tmproj
+
+# IntelliJ
+.idea
+*.iml
+
+# Eclipse
+.buildpath
+.project
+.settings
+
+# NetBeans
+nbproject/
+
+# Vim
+*~
+
+# node_modules
+node_modules/
+
+# typings
+typings/
+
+# dist
+dist/js
