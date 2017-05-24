@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         'main' : path.join(__dirname, 'src', 'main.ts'),
         'circle' : path.join(__dirname, 'src', 'circle.ts'),
+        'circles' : path.join(__dirname, 'src/circles', 'circles.ts'),
     },
 
     output: {
