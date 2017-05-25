@@ -1,16 +1,15 @@
 import Material from "./material";
+import Stage from "../stage";
 
-class Circles
+class Circles extends Stage
 {
-    protected stage:createjs.Stage;
     protected objects:Material[] = [];
-
-    protected framerate:number = 60;
     protected maxObjectNum:number = 50;
 
     public constructor()
     {
-        this.setUp();
+        super();
+        this.setup();
     }
 
     protected createObjects():void
@@ -37,23 +36,21 @@ class Circles
         this.stage.addChild(material.getShape());
     }
 
-    protected setUp():void
+    protected setup():void
     {
-        this.stage = new createjs.Stage("canvas");
+        super.setup();
 
         this.createObjects();
 
         this.update();
 
-        createjs.Ticker.framerate = this.framerate;
-        createjs.Ticker.on("tick", this.update, this);
-
+        this.startTick();
     }
 
     protected update():void
     {
         this.updateObjects();
-        this.stage.update();
+        super.update();
     }
 
     /**
