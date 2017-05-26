@@ -6,6 +6,7 @@ module.exports = {
         'circle' : path.join(__dirname, 'src', 'circle.ts'),
         'circles' : path.join(__dirname, 'src/circles', 'circles.ts'),
         'distance' : path.join(__dirname, 'src/distance', 'distance.ts'),
+        'blur' : path.join(__dirname, 'src/blur', 'blur.ts'),
     },
 
     output: {
