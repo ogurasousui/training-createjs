@@ -10,7 +10,7 @@ gulp.task('webpack', () => {
     ])
         .pipe(plumber())
         .pipe(webpack(webpackConfig))
-        .pipe(gulp.dest('./dist/js/'));
+        .pipe(gulp.dest('./docs/js/'));
 });
 
 gulp.task('webpack_watch', () => {
@@ -23,7 +23,7 @@ gulp.task('webpack_watch', () => {
     ])
         .pipe(plumber())
         .pipe(webpack(config))
-        .pipe(gulp.dest('./dist/js/'));
+        .pipe(gulp.dest('./docs/js/'));
 });
 
 gulp.task('watch', () => {

@@ -17,7 +17,7 @@ appの箇所は好きな名前でいいです
 
 起動
 ```
-docker run --name app -e "TZ=Asia/Tokyo" -d -i -v /xxx/training-createjs/dist:/var/www/html -p 80:80 -t app:latest
+docker run --name app -e "TZ=Asia/Tokyo" -d -i -v /xxx/training-createjs/docs:/var/www/html -p 80:80 -t app:latest
 ```
 xxxは自分のtraining-createjsまでのパス
 --nameは好きな名前で。app:latestもbuild時に名前変えているならそれにする
