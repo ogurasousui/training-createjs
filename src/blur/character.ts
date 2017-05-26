@@ -16,6 +16,9 @@ export default class Character
 
     protected shadowInterval:number = 3;
     protected shadowIntervalCount:number = 0;
+    protected movingCount:number = 0;
+
+    protected speed:number = 5;
 
     public constructor(image:any, setX:number = 0, setY:number = 0)
     {
@@ -128,10 +131,12 @@ export default class Character
         if (++this.shadowIntervalCount > this.shadowInterval)
         {
             this.shadowIntervalCount = 0;
-            let shadow = new Shadow(this.image, character.x, character.y, this.nowDirection);
+            this.character.cache(-32, -64, 64, 64);
+            let shadow = new Shadow(this.character.cacheCanvas, character.x, character.y);
             this.shadows.push(shadow);
             character.parent.addChild(shadow.getCharacter());
             character.parent.swapChildren(this.getCharacter(), shadow.getCharacter());
+            this.character.uncache();
         }
     }
 
@@ -151,8 +156,8 @@ export default class Character
         if (distance >= 5)
         {
             this.moving = true;
-            object.x += (targetX-beforeX) / distance * 5;
-            object.y += (targetY-beforeY) / distance * 5;
+            object.x += (targetX-beforeX) / distance * (this.speed + (this.movingCount / 3));
+            object.y += (targetY-beforeY) / distance * (this.speed + (this.movingCount / 3));
 
             this.changeDirection(beforeX, beforeY, object.x, object.y);
         }
@@ -203,8 +208,13 @@ export default class Character
 
         if (this.nowDirection != setPos)
         {
+            this.movingCount = 0;
             this.nowDirection = setPos;
             this.characterSprite.gotoAndPlay(setPos);
+        }
+        else
+        {
+            this.movingCount++;
         }
     }
 
