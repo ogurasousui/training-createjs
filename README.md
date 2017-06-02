@@ -1,6 +1,6 @@
 # training-createjs
 
-https://ogurasousui.github.io/
+https://ogurasousui.github.io/training-createjs/
 
 ## セットアップ
 
