@@ -8,6 +8,7 @@ module.exports = {
         'distance' : path.join(__dirname, 'src/distance', 'distance.ts'),
         'blur' : path.join(__dirname, 'src/blur', 'blur.ts'),
         'filter' : path.join(__dirname, 'src/filter', 'filter.ts'),
+        'scroll' : path.join(__dirname, 'src/scroll', 'scroll.ts'),
     },
 
     output: {
