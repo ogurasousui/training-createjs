@@ -43,3 +43,8 @@ watch
 
 ローカルでも見ることはできるが、crossoriginの関係上、画像のフィルタが効かない
 正しいものを確認したい場合はdockerでやったほうが良い
+
+typingsをインストールする場合の例
+```
+typings install --save dt~box2d --global
+```

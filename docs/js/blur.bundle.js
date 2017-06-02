@@ -114,7 +114,8 @@
 	        this.framerate = 60;
 	    }
 	    Stage.prototype.setup = function () {
-	        this.stage = new createjs.Stage("canvas");
+	        this.canvas = document.getElementById("canvas");
+	        this.stage = new createjs.Stage(this.canvas);
 	    };
 	    Stage.prototype.startTick = function () {
 	        createjs.Ticker.framerate = this.framerate;

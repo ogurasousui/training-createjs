@@ -58,7 +58,7 @@
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var stage_1 = __webpack_require__(1);
 	var map_1 = __webpack_require__(6);
-	var character_1 = __webpack_require__(7);
+	var character_1 = __webpack_require__(8);
 	var Scroll = (function (_super) {
 	    __extends(Scroll, _super);
 	    function Scroll() {
@@ -120,7 +120,8 @@
 	        this.framerate = 60;
 	    }
 	    Stage.prototype.setup = function () {
-	        this.stage = new createjs.Stage("canvas");
+	        this.canvas = document.getElementById("canvas");
+	        this.stage = new createjs.Stage(this.canvas);
 	    };
 	    Stage.prototype.startTick = function () {
 	        createjs.Ticker.framerate = this.framerate;
@@ -144,7 +145,7 @@
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var tile_1 = __webpack_require__(8);
+	var tile_1 = __webpack_require__(7);
 	var Map = (function () {
 	    function Map() {
 	        this.tile = [];
@@ -181,22 +182,6 @@
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
-
-	"use strict";
-	Object.defineProperty(exports, "__esModule", { value: true });
-	var Character = (function () {
-	    function Character() {
-	    }
-	    Character.prototype.update = function () {
-	    };
-	    return Character;
-	}());
-	exports.default = Character;
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -258,6 +243,22 @@
 	    return Tile;
 	}());
 	exports.default = Tile;
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	"use strict";
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var Character = (function () {
+	    function Character() {
+	    }
+	    Character.prototype.update = function () {
+	    };
+	    return Character;
+	}());
+	exports.default = Character;
 
 
 /***/ })

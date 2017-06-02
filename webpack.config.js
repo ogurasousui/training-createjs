@@ -9,6 +9,7 @@ module.exports = {
         'blur' : path.join(__dirname, 'src/blur', 'blur.ts'),
         'filter' : path.join(__dirname, 'src/filter', 'filter.ts'),
         'scroll' : path.join(__dirname, 'src/scroll', 'scroll.ts'),
+        'box2d' : path.join(__dirname, 'src/box2d', 'box.ts'),
     },
 
     output: {
